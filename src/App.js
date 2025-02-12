@@ -10,7 +10,7 @@ import Dashboard from "./Pages/Dashboard/Dashboard";
 import RequireAuth from "./Pages/Auth/Protection/RequireAuth";
 import User from "./Pages/Dashboard/Users/User";
 import AddUser from "./Pages/Dashboard/Users/AddUser";
-import Writer from "./Pages/Dashboard/Writer";
+
 import Err404 from "./Pages/Auth/Errors/404";
 import RequireBack from "./Pages/Auth/Protection/RequireBack";
 import Categories from "./Pages/Dashboard/Category/Categories";
@@ -58,9 +58,7 @@ function App() {
               <Route path="products/:id" element={<UpdateProduct />} />
               <Route path="product/add" element={<AddProduct />} />
             </Route>
-            <Route element={<RequireAuth allowedRole={["1996", "1995"]} />}>
-              <Route path="writer" element={<Writer />} />
-            </Route>
+            <Route element={<RequireAuth allowedRole={["1996", "1995"]} />} />
           </Route>
         </Route>
       </Routes>
