@@ -17,7 +17,7 @@ export default function ShowLatestProducts() {
     <SaleProducts
       title={product.title}
       description={product.description}
-      img={product.images.image}
+      img={product.images[0].image}
       Sale
       price={product.price}
       discount={product.discount}
